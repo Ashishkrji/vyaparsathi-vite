@@ -1,0 +1,172 @@
+.about-section {
+    padding   : 8rem 1rem;
+    background: linear-gradient(to bottom, #000, #111);
+    color     : #fff;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin   : 0 auto;
+}
+
+.about-header {
+    margin-bottom: 5rem;
+}
+
+.about-title {
+    font-size              : 3rem;
+    font-weight            : 900;
+    line-height            : 1.1;
+    margin-bottom          : 1.5rem;
+    background             : linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip        : text;
+    color                  : transparent;
+    letter-spacing         : -1.2px;
+}
+
+.about-subtitle {
+    font-size  : 1.20rem;
+    color      : #ccc;
+    max-width  : 800px;
+    margin     : 0 auto;
+    line-height: 1.8;
+    opacity    : 0.95;
+}
+
+.about-grid {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap                  : 3rem;
+    margin-bottom        : 6rem;
+}
+
+.about-card {
+    background-color: rgba(17, 17, 17, 0.7);
+    /* backdrop-filter : blur(10px); */
+    border-radius   : 1.5rem;
+    padding         : 3rem 2rem;
+    transition      : all 0.5s ease;
+    border          : 1px solid rgba(255, 255, 255, 0.1);
+    position        : relative;
+    overflow        : hidden;
+}
+
+.about-card::before {
+    content   : '';
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    right     : 0;
+    height    : 4px;
+    background: linear-gradient(90deg, #fff, transparent);
+    opacity   : 0;
+    transition: opacity 0.5s ease;
+}
+
+.about-card:hover::before {
+    opacity: 1;
+}
+
+.about-card:hover {
+    transform   : translateY(-15px);
+    box-shadow  : 0 30px 60px rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.about-icon-wrapper {
+    margin-bottom: 2rem;
+}
+
+.about-icon-circle {
+    width           : 90px;
+    height          : 90px;
+    margin          : 0 auto;
+    background-color: #fff;
+    border-radius   : 50%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    transition      : all 0.4s ease;
+    box-shadow      : 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-card:hover .about-icon-circle {
+    transform : scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.about-icon-circle svg {
+    width : 48px;
+    height: 48px;
+    fill  : #000;
+}
+
+.about-card-title {
+    font-size    : 1.8rem;
+    font-weight  : 700;
+    margin-bottom: 1.2rem;
+    color        : #fff;
+}
+
+.about-card-text {
+    font-size  : 1.1rem;
+    color      : #ddd;
+    line-height: 1.8;
+    opacity    : 0.9;
+}
+
+.about-closing {
+    font-size  : 1.5rem;
+    color      : #bbb;
+    max-width  : 900px;
+    margin     : 0 auto;
+    line-height: 1.9;
+    font-style : italic;
+    opacity    : 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-title {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 6rem 1rem;
+    }
+
+    .about-title {
+        font-size: 2.8rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap                  : 2.5rem;
+    }
+
+    .about-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .about-closing {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-card-title {
+        font-size: 1.6rem;
+    }
+}

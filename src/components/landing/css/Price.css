@@ -1,0 +1,198 @@
+.price-section {
+    padding   : 8rem 1rem;
+    background: linear-gradient(to bottom, #000, #111);
+    color     : #fff;
+    text-align: center;
+}
+
+.price-container {
+    max-width: 1000px;
+    margin   : 0 auto;
+}
+
+.price-title {
+    font-size              : 3rem;
+    font-weight            : 900;
+    line-height            : 1.1;
+    margin-bottom          : 1.5rem;
+    background             : linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip        : text;
+    color                  : transparent;
+    letter-spacing         : -1.2px;
+}
+
+.price-subtitle {
+    font-size  : 1.25rem;
+    color      : #ccc;
+    max-width  : 700px;
+    margin     : 0 auto 5rem;
+    line-height: 1.8;
+    opacity    : 0.95;
+}
+
+.price-grid {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap                  : 4rem;
+    justify-content      : center;
+}
+
+.price-card {
+    background-color: rgba(17, 17, 17, 0.6);
+    /* backdrop-filter : blur(12px); */
+    border-radius   : 1.5rem;
+    padding         : 3rem 2.5rem;
+    transition      : all 0.5s ease;
+    border          : 1px solid rgba(255, 255, 255, 0.08);
+    position        : relative;
+    overflow        : hidden;
+}
+
+.price-card.popular {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform   : scale(1.08);
+    box-shadow  : 0 30px 60px rgba(255, 255, 255, 0.12);
+}
+
+.price-card.popular::before {
+    content         : 'Most Popular';
+    position        : absolute;
+    top             : 1.2rem;
+    right           : -3.5rem;
+    background-color: #fff;
+    color           : #000;
+    padding         : 0.6rem 4.5rem;
+    font-size       : 0.95rem;
+    font-weight     : 700;
+    transform       : rotate(45deg);
+    box-shadow      : 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.price-card:hover {
+    transform   : translateY(-15px) scale(1.03);
+    box-shadow  : 0 35px 70px rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-header {
+    margin-bottom: 2.5rem;
+}
+
+.price-plan {
+    font-size    : 1.8rem;
+    font-weight  : 700;
+    color        : #fff;
+    margin-bottom: 0.8rem;
+}
+
+.price-amount {
+    font-size     : 4.2rem;
+    font-weight   : 900;
+    color         : #fff;
+    letter-spacing: -2px;
+}
+
+.price-period {
+    color      : #aaa;
+    font-size  : 1.1rem;
+    font-weight: 500;
+}
+
+.price-features {
+    list-style: none;
+    padding   : 0;
+    margin    : 2.5rem 0;
+    text-align: left;
+}
+
+.price-features li {
+    padding      : 0.9rem 0;
+    color        : #ddd;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size    : 1.05rem;
+}
+
+.price-features li:last-child {
+    border-bottom: none;
+}
+
+.price-features li strong {
+    color: #fff;
+}
+
+.price-button {
+    display        : block;
+    width          : 100%;
+    padding        : 1.3rem;
+    border-radius  : 1rem;
+    font-weight    : 700;
+    font-size      : 1.2rem;
+    margin-top     : 2.5rem;
+    transition     : all 0.4s ease;
+    text-align     : center;
+    text-decoration: none;
+}
+
+.price-button.primary {
+    background-color: #fff;
+    color           : #000;
+}
+
+.price-button.primary:hover {
+    background-color: #eee;
+    transform       : translateY(-5px);
+    box-shadow      : 0 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+.price-button.secondary {
+    background-color: transparent;
+    color           : #fff;
+    border          : 2px solid #fff;
+}
+
+.price-button.secondary:hover {
+    background-color: #fff;
+    color           : #000;
+    transform       : translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+        gap                  : 3rem;
+    }
+
+    .price-card.popular {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .price-title {
+        font-size: 3rem;
+    }
+
+    .price-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .price-card.popular {
+        transform: none;
+    }
+
+    .price-amount {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-title {
+        font-size: 2.6rem;
+    }
+
+    .price-card {
+        padding: 2.5rem 2rem;
+    }
+}

@@ -1,0 +1,144 @@
+/* Base Header Styles */
+header.navbar {
+    background-color: #000 !important;
+    box-shadow      : 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition      : all 0.3s ease;
+    padding         : 1rem 0;
+    z-index         : 1050;
+    border-bottom   : 1px solid #eee;
+}
+
+/* Shrinked Header on Scroll (Optional Enhancement) */
+header.navbar.scrolled {
+    padding   : 0.5rem 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Styling */
+.navbar-brand {
+    color         : #fff !important;
+    font-weight   : 800;
+    font-size     : 1.9rem;
+    letter-spacing: -0.8px;
+    transition    : color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #fff !important;
+}
+
+/* Join Waitlist Link Button */
+.join-waitlist-btn {
+    color          : #fff !important;
+    font-weight    : 600;
+    font-size      : 1.05rem;
+    text-decoration: none;
+    padding        : 0.75rem 1.5rem;
+    border-radius  : 1rem;
+    transition     : all 0.3s ease;
+    position       : relative;
+}
+
+.join-waitlist-btn:hover {
+    color           : #fff !important;
+    background-color: #000;
+    transform       : translateY(-3px);
+    box-shadow      : 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary Sign Up Button */
+.btn-primary {
+    background-color: #fff !important;
+    border          : 2px solid #fff !important;
+    color           : #000 !important;
+    font-weight     : 600;
+    font-size       : 1rem;
+    padding         : 0.75rem 2rem;
+    border-radius   : 0.5rem;
+    text-transform  : uppercase;
+    letter-spacing  : 0.8px;
+    transition      : all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #fff !important;
+    border-color    : #000 !important;
+    transform       : translateY(-3px);
+    box-shadow      : 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile Toggler */
+.navbar-toggler {
+    border : none;
+    padding: 0.4rem 0.75rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width           : 1.6em;
+    height          : 1.6em;
+}
+
+/* Mobile Menu Dropdown */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        background-color: #fff;
+        margin-top      : 1.2rem;
+        padding         : 1.8rem 1.5rem;
+        border-radius   : 1rem;
+        box-shadow      : 0 15px 40px rgba(0, 0, 0, 0.15);
+        border          : 1px solid #ddd;
+    }
+
+    .navbar-collapse .d-flex {
+        flex-direction: column;
+        gap           : 1.2rem;
+        align-items   : stretch;
+    }
+
+    .join-waitlist-btn,
+    .btn-primary {
+        width          : 100%;
+        text-align     : center;
+        justify-content: center;
+        padding        : 1rem 1.5rem;
+        font-size      : 1.1rem;
+    }
+
+    .join-waitlist-btn {
+        border       : 2px solid #000;
+        border-radius: 0.5rem;
+    }
+
+    .join-waitlist-btn:hover {
+        background-color: #000;
+        color           : #fff !important;
+    }
+}
+
+/* Desktop Spacing */
+@media (min-width: 768px) {
+    .navbar-collapse .d-flex {
+        gap        : 2.5rem;
+        align-items: center;
+    }
+}
+
+/* Smooth Scrolling (for anchor links like #waitlist) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Accessibility & SEO */
+header[role="banner"] {
+    outline: none;
+}
+
+/* Remove default Bootstrap link underline on hover */
+.join-waitlist-btn {
+    text-decoration: none !important;
+}
