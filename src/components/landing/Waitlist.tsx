@@ -27,7 +27,7 @@ const Waitlist: React.FC = () => {
     }
 
     try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: {
@@ -48,7 +48,7 @@ const Waitlist: React.FC = () => {
       setName("");
       setEmail("");
       setPhone("");
-    } catch (err) {
+    } catch (_err) {
       setError("Failed to submit. Please check your connection and try again.");
     } finally {
       setLoading(false);
